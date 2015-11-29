@@ -11,3 +11,17 @@ http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/rel
 SAPUi5 plugin 
 
 https://tools.hana.ondemand.com/luna
+
+
+How to setup SAP UI 5
+
+http://scn.sap.com/community/developer-center/front-end/blog/2013/06/01/how-to-install-a-basic-development-environment-for-sapui5
+
+SAP UI 5 Tutorial
+
+https://sapui5.netweaver.ondemand.com
+
+Open UI 5 Tutorial
+
+https://openui5.hana.ondemand.com
+
