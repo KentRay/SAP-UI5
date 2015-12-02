@@ -1,0 +1,44 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+		controllerName="rizveena.FirstView" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Welcome">
+		<content>
+	
+
+	
+<f:SimpleForm title="Employee Form" maxContainerCols="2" editable="true" >
+  <f:content>
+  
+  <core:Title text="Employee Details"></core:Title>
+  
+     <Label text="Enter the Employee ID"></Label>
+     <Input width="300px"></Input>
+     <Label text="Enter the Employee Name"></Label>
+     <Input width="300px"></Input>
+     <Label text="Enter the Employee Designation"></Label>
+     <Input width="300px"></Input>
+     
+   <core:Title text="Employee Contact"></core:Title>
+   
+     <Label text="Enter the Employee Email"></Label>
+     <Input width="300px"></Input>
+     <Label text="Enter the Employee Phone No"></Label>
+     <Input width="300px"></Input>
+     <Label text="Enter the Employee Pincode"></Label>
+     <Input width="300px"></Input>
+     
+ </f:content>
+</f:SimpleForm>	
+
+<Bar>
+<contentRight>
+ <Button text="Submit" type="Reject" width="100px"></Button>
+</contentRight>
+</Bar>
+
+
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

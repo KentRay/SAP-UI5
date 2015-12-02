@@ -1,0 +1,78 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+		controllerName="rizveena.gridview" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+	
+<Panel headerText="Employee Form">	
+<l:Grid >
+	
+	<l:content>
+	
+		<Label text="Enter Employee ID" >
+			<layoutData>
+				<l:GridData span="L3 M3 S12"  />
+			</layoutData>
+		</Label>
+		<Input type="Text" >
+			<layoutData>
+				<l:GridData span="L3 M9 S12" />
+			</layoutData>
+		</Input>
+		<Label text="Enter Employee NAme" >
+			<layoutData>
+				<l:GridData span="L3 M3 S12" linebreakL="true" />
+			</layoutData>
+		</Label>
+		<Input type="Text" >
+			<layoutData>
+				<l:GridData span="L3 M9 S12" />
+			</layoutData>
+		</Input>
+		<Label text="Enter Employee Desig" >
+			<layoutData>
+				<l:GridData span="L3 M3 S12"  linebreakL="true"/>
+			</layoutData>
+		</Label>
+		<Input type="Text" >
+			<layoutData>
+				<l:GridData span="L3 M9 S12" />
+			</layoutData>
+		</Input>
+		<Label text="Enter Employee Email" >
+			<layoutData>
+				<l:GridData span="L3 M3 S12"  linebreakL="true"/>
+			</layoutData>
+		</Label>
+		<Input type="Text" >
+			<layoutData>
+				<l:GridData span="L3 M9 S12" />
+			</layoutData>
+		</Input>
+		<Label text="Enter Employee Phone" >
+			<layoutData>
+				<l:GridData span="L3 M3 S12" linebreakL="true" />
+			</layoutData>
+		</Label>
+		<Input type="Text" >
+			<layoutData>
+				<l:GridData span="L3 M9 S12" />
+			</layoutData>
+		</Input>
+		<Label text="Enter Employee Pincode" >
+			<layoutData>
+				<l:GridData span="L3 M3 S12"  linebreakL="true"/>
+			</layoutData>
+		</Label>
+		<Input type="Text" >
+			<layoutData>
+				<l:GridData span="L3 M9 S12" />
+			</layoutData>
+		</Input>
+		
+	</l:content>
+	</l:Grid>	
+	
+	</Panel>
+		</content>
+	</Page>
+</core:View>
