@@ -1,0 +1,43 @@
+
+
+ ***Main Page******
+ dte-web-apps > Components>html > Current Bill - Page - Linked Account User
+ dte-web-apps > Components>js > view > CurrentBill - View - CurrentBill
+
+
+******Templates*****
+ dte-web-design > Components > html > Current Bill - Block - Account Info
+ dte-web-design > Components > html > Current Bill - Block - Balance Amt
+ dte-web-design > Components > html > Current Bill - Block - Balance Widget- Mobile
+ dte-web-design > Components > html > Current Bill - Block - Banner Messages
+ dte-web-design > Components > html > Current Bill - Modal - Switch Accounts
+ dte-web-design > Components > html > Current Bill - Block - Bill Comparison
+ dte-web-design > Components > html > Current Bill - Block - Multiple - Acc
+ dte-web-design > Components > html > Current Bill - Block - Summary of Charges
+ dte-web-design > Components > html > Current Bill - Block - Invoice Line Item (Reject this)
+ dte-web-design > Components > html > Current - Bill - BWB - SPP
+
+*****Css*****
+
+ dte-web-design > Components > css > Current Bill > Current Bill CSS
+
+*****Js******
+ dte-web-design > Components > js > library >Bill Compare JS
+ dte-web-design > Components > js > library > Current Bill JS
+ dte-web-design > Components> js > library > Payment Plan JS
+ dte-web-design > Components> js > library Animation JS
+ dte-web-design > Components> js > library > Contextual Info JS (Reject this - But doesn't change so not needed)
+ dte-web-design > Components> js > library > Bill Compare - Billing Cycle Pictography JS
+
+
+****OTHER Dependencies********
+DONOT Push or Edit these
+dte-web-apps / Payment & Usage / Current Bill / Current Bill
+dte-web-design / css / assets
+dte-web-apps / js / utils / utils.js
+dte-web-design / info page
+
+
+Libraries>dte-web-design>Components>html>Global JS
+Libraries>dte-web-apps>Components>js>utils>constants_wcm.js
+Libraries>dte-web-design>Components>js>library>content

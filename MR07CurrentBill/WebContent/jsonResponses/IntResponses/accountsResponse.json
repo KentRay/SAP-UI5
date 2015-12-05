@@ -1,0 +1,13 @@
+{
+  "customerName": "AUDREY O HARDWELL",
+  "accounts": [{
+    "accountNumber": "207767000012",
+    "serviceAddresses": [{
+      "addressLine1": "3578 25th St.",
+      "addressLine2": "",
+      "city": "Detroit",
+      "state": "MI",
+      "zipcode": "48208"
+    }]
+  }]
+}

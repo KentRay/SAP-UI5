@@ -1,0 +1,37 @@
+ <!-- ************************************************************
+            START - Mobile Balance Widget Template
+      ************************************************************ -->
+        <script type="text/template" id="balanceAmtMobileWidgetTemp">
+            <div  style="<%=(balanceData[0].attributes.totalAmountDue.priorityLevel == 0 ? 'color:#4AA847':'')%>">
+
+        <div class="PADDT40PXB30PXLR15PX leftNav_height">
+        <% _.each(balanceData, function(leftnavBalanceData){ %>
+            <% if(balanceData[0].attributes.totalAmountDue.amount == 0){%>
+              <h5 class="font_1em text-center" style="color:#4AA847">You're all set!</h5>
+              <h5 class="font_1em text-center" style="color:#4AA847">Total Amount Due</h5>
+            <% } else {%>  
+             <h5 class="font_1em <%=(balanceData[0].attributes.totalAmountDue.priorityLevel == 0 ? '':'dte-michigan')%> text-center" style="<%=(balanceData[0].attributes.totalAmountDue.priorityLevel == 0 ? 'color:#4AA847':'')%>"><%= leftnavBalanceData.attributes.totalAmountDue.prefix %></h5>
+             <% } %>
+             <h1 class="leftnav_price <%=(balanceData[0].attributes.totalAmountDue.priorityLevel == 0 ? '':'dte-michigan')%>"style="<%=(balanceData[0].attributes.totalAmountDue.priorityLevel == 0 ? 'color:#4AA847':'')%>"><%= leftnavBalanceData.attributes.totalAmountDue.amount.toDisplayCurrency() %></h1><div class="text-center">
+            <%if(leftnavBalanceData.attributes.totalAmountDue.dueDate ){ 
+              if( new Date(leftnavBalanceData.attributes.totalAmountDue.dueDate) >= new Date()){%>
+                <small><%= leftnavBalanceData.attributes.totalAmountDue.suffix %></small><br/>
+                <span class="bluColor <%=(balanceData[0].attributes.totalAmountDue.priorityLevel == 0 ? '':'dte-michigan')%>"style="<%=(balanceData[0].attributes.totalAmountDue.priorityLevel == 0 ? 'color:#4AA847':'')%>"><%= utils.formatDateLong(leftnavBalanceData.attributes.totalAmountDue.dueDate) %></span></div>
+              <%}else{%>
+                <span>Due</span><br/>
+                <span <%=(balanceData[0].attributes.totalAmountDue.priorityLevel == 0 ? 'style="#4AA847"':'class="bluColor dte-michigan"')%>>Immediately</span>
+              <%}%>
+            <%}%>
+            <%if(balanceData[0].attributes.totalAmountDue.amount == 0){%>
+              <span class=""></span><br/>
+              <small class="font_1em text-center" style="color:#4AA847">Future Payments</small>
+              <span class="infoIcon infoIconalign hnd" data-toggle="popover" data-placement="bottom" data-content="Future payments will be used to reduce the amount due on your next billing statement." style="margin-left:25px" ></span>
+            <%}%> 
+            <%});%>
+           </div></div>
+           <%if(balanceData[0].attributes.numberOfAccounts < 6)%>
+           <input onClick="javascript:window.open('/wps/wcm/myconnect/dte-web/quicklinks/pay-bill','_self',false)" style="height: 45px;  font-size: 1.2em;color:#fff;" type="button" value='<%=(balanceData[0].attributes.totalAmountDue.priorityLevel == 0 ? "Make Future Payments":"Pay Now")%>' class='<%=(balanceData[0].attributes.totalAmountDue.priorityLevel == 0 ? "btnGreen":"btnBlue")%>' />
+    </script>
+        <!-- ************************************************************
+            END - Mobile Balance Widget Template
+      ************************************************************ -->

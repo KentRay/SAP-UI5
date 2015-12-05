@@ -1,0 +1,294 @@
+<!-- ************************************************************
+              START - Multiple Accounts Template
+        ************************************************************ -->
+   <script type="text/template" id="currentBillMultipleTemp">
+            <div class="panel PADDTB10PXLR15PX">
+
+
+              <div class="row PADDTB10PX">
+                  <div class="col-md-12">
+                    <% _.each(currentBillDat, function(currentBill){ %>
+                      <h4 class="margin-left-sm font-size-20-xs mcurrentbill-acc"><%= currentBill.attributes.currentBillData.userProfile.name %></h4>
+                    <% }); %>
+                  </div>
+
+                </div>
+            </div>
+      <!-- Hiding banner Messages in multiple account
+            <section class="whiteBg MRGB10PX">
+                <% _.each(currentBillDat,function(currentBill,item){ %>
+                    <% for(var items in currentBill.attributes.currentBillData.accounts[item].statusBarMessages) { %>
+                      <div class="<%= currentBill.attributes.currentBillData.accounts[item].statusBarMessages[items].type %> brdBtm">
+                      <div class="PADDT5PXB10PX">
+                        <%=currentBill.attributes.currentBillData.accounts[item].statusBarMessages[items].text %>
+                      </div>
+                    </div>
+                  <% } %>
+              <% }); %>
+            </section>
+           -->
+           <div id="MobileBalanceWidget" class="panel text-center  balanceBlockMobile totalAmnthide mPDGB30PX"></div>
+              <article id="togleairticle" class="whiteBg summaryInfo toggleHeader selectedAcc eleNone hnd mtoggleH PADDT10PXMACC">
+                <div class="frmTbl mobwhite">
+                  <div class="frmRow brdNone">
+                    <% _.each(currentBillDat,function(currentBill,item){ %>
+                        <div class="text-left PL15TB4R0 multiPayBtnSec"><h5 class="mobTXTblue"><span class="tglIcon mexpand-icon expand-icon MRGT20PX" id="togleicon"></span><span class="lblalg"><span class="noAcc"></span class="mWDT100"> Bills Selected:</span><span class="additionVal MRGL10PX mWDT100 mobTXTblue"></span></h5>
+
+            </div>
+                        <div class="frmCell text-right PADDR15PX mFLTR mBRD0 mPDGT20pxB30px payseletedbills pay_selected_bill payBtntTop">
+                          <input onclick="javascript:window.openPaymentCenterSelectedBills()" id="payseletedbilltop" type="button" value="Pay Selected Bills" class="btnBlue payBillBtn  payBtn mPDNG10  mobbtndisp" />
+              <div class="errorTXT eleNone" id="errorMSG"> The maximum number of payments you can make is five. </div>
+                        </div>
+            <div class="frmCell text-right PADDR15PX mFLTR mBRD0 mPDGT20pxB30px hidden  makefuturepayments futurebtntTop" >
+              <input onclick="javascript:window.openPaymentCenterSelectedBills()" type="button" id="makeFuturePayBtnTop" value="Make Future Payments" class="btnBlue payBillBtn  payBtn mPDNG10 makefuturepayment  mobbtndisp"/>
+              <div class="errorTXTMFP eleNone" id="errorMSG1"> The maximum number of payments you can make is five. </div>
+                        </div>
+                      <% }); %>
+                    </div>
+                  </div>
+                </article>
+                <article class="whiteBg summaryInfo toggle eleNone MRGT10PX mMultiAccdhide">
+                  <div class="selAddr"></div>
+                  <div class="frmTbl selectedBill">
+                    <div class="frmRow">
+                      <% _.each(currentBillDat,function(currentBill,item){ %>
+                        <div class="frmCell text-left PADDL15PX">
+                          <span class="noAcc topN10PX"></span> <label class="topN10PX"> Bills Selected:</label><span class="additionVal MRGL10PX"> </span>
+                        </div>
+                      <% }); %>
+                      <div class="frmCell text-right PADDR15PX pay_selected_bill paybtnmTop" id="payseletedbillt">
+                        <input type="button" id="payseletedbilltt" onclick="javascript:window.openPaymentCenterSelectedBills()" value="Pay Selected Bills" class="btnBlue MRGR15PX"/>
+            <div class="errorTXTIN eleNone" id="errorMSG2"> The maximum number of payments you can make is five. </div>
+                      </div>
+            <div class="frmCell text-right PADDR15PX hidden makefuturepayments futurebtnmTop" id="makefuturepaymentt">
+                       <input type="button" id="makeFuturePayBtn" onclick="javascript:window.openPaymentCenterSelectedBills()" value="Make Future Payments" class="btnBlue MRGR15PX  makefuturepayment"/>
+             <div class="errorTXTINMFP eleNone" id="errorMSG3"> The maximum number of payments you can make is five. </div>
+                     </div>
+                    </div>
+                  </div>
+                </article>
+               <section class="panel PADDTB10PXLR15PX MRGT10PX mMRGT5PX">
+                <%if(currentBillDat[0].attributes.currentBillData.accounts.length > 5) { %>
+                <article class="">
+                  <div class="row brdBtm PADDT10B20PXPX ">
+                    <div class="col-md-6 col-sm-6 text-left mtext-center ipadcenter">
+                      <input type="text" id="srchVal" />
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-left mPDT10PX mtext-center ipadcenter">
+                      <input type="button" value="Search" class="btn-primary" id="srch"/>
+                      <a  class="reset btn-link">Reset</a>
+                    </div>
+                  </div>
+                </article>
+                <%}%>
+                <article class="MRGT10PX">
+        <section class="multiSortTap">
+            <%if(currentBillDat[0].attributes.currentBillData.accounts.length > 5) { %>
+            <div class="row brdBtm mobliehs">
+            <div class="col-md-12 text-right sort PADDR20PX MRGT10PXB20PX mFLTLT">
+              <label class="orderBy">Order by:</label>
+              <ul class="fRight">
+              <li id="sort_amtDue">Amount Due<span class=""></span></li>
+              <li id="sort_date">Due Date<span class=""></span></li>
+              <li id="sort_account">Account<span class=""></span></li>
+              <li id="sort_address">Service Address<span class=""></span></li>
+              </ul>
+            </div>
+            </div>
+            <%}%>
+          </section>
+          <%if(currentBillDat[0].attributes.currentBillData.accounts.length > 5) { %>
+          <section class="multiSortSelection row brdBtm PADDT10PXB20PX">
+            <div>
+              <h5 class="fLeft col-xs-6 text-center">Order by</h5>
+              <select class="fLeft col-xs-6 multiAccSorting">
+                <option value="amountDueHtoL">Amount Due(high to low)</option>
+                <option value="amountDueLtoH">Amount Due(low to high)</option>
+                <option value="dueDateLtoH">Due Date(low to high)</option>
+                <option value="dueDateHtoL">Due Date(high to low)</option>
+                <option value="accountLtoH">Account(low to high)</option>
+                <option value="accountHtoL">Account(high to low)</option>
+                <option value="serviceAddressLtoH">Service Address(low to high)</option>
+                <option value="serviceAddressHtoL">Service Address(high to low)</option>
+              </select>
+            </div>
+          </section>
+          <%}%>
+          <%if(currentBillDat[0].attributes.currentBillData.accounts.length > 5 ) {%>
+            <div class="bluColor PADDTB13PX">Please note, the maximum number of accounts that can be selected and paid at one time is FIVE.</div>
+            <hr class="linePos linewidth"></hr>
+          <%}%>
+                  <article class="multiAccounts">
+                    <% _.each(currentBillDat,function(currentBill,item,index){ %>
+
+                      <% for(var items in currentBill.attributes.currentBillData.accounts) { %>
+                        <div class="summaryInfo toggleHeader accountsRow" id="multiAccountDetails">
+                        <% var x= currentBill.attributes.currentBillData.accounts[items].accountInlineMessages.length;
+                           if(x > 0){
+                            if (currentBill.attributes.currentBillData.accounts[items].accountInlineMessages[0].type == "IL_PastDueL2StsMsg"){
+                                   var  y = "brdRedRgt";
+                            }else if(currentBill.attributes.currentBillData.accounts[items].accountInlineMessages[0].type == "IL_PastDueL1StsMsg"){
+                                   var  y = "brdOrgRgt";
+                            }else {
+                             var y = "";
+                            }
+                           }
+                         %>
+                         <div class="row brdBtm <%= ((x > 0) ? y : "" )%>">
+                            <div class="col-md-6 col-sm-6 text-left">
+                              <span class="tglIcon expand-icon MRGR20PX MRGT15PX"></span>
+                              <section class="addressSec">
+
+                                <span class="address">
+                                <%= currentBill.attributes.currentBillData.accounts[items].serviceAddress[0].address.toCamelCase() %>,
+                                <%= currentBill.attributes.currentBillData.accounts[items].serviceAddress[0].city.toCamelCase() %>,
+                                <%= currentBill.attributes.currentBillData.accounts[items].serviceAddress[0].state %>,
+                                <%= currentBill.attributes.currentBillData.accounts[items].serviceAddress[0].zip %><br/>
+                                </span>
+                <!-- <div class="col-md-1 text-right mchkBoxHS">
+                  <span class="customChkBox MRGT15PX"><input type="checkbox" class="chkBox" id="<%= items %>"/></span>
+                </div> -->
+                                <span class="bluColor">Account No.</span>
+                                <span class="acNo"><%= utils.formatAccountNumber(currentBill.attributes.currentBillData.accounts[items].accountNumber) %></span>
+               </section>
+                            </div>
+              <div class="col-md-1 text-right multichkbx">
+                              <span class="customChkBox "><input type="checkbox" class="chkBox" id="<%= items %>"/></span>
+                            </div>
+                            <div class="col-md-5 text-right DueMsgSection mMultiAccAmt">
+                              <span class="amtDue <%= ((currentBill.attributes.currentBillData.accounts[items].accountInlineMessages.length > 0)? currentBill.attributes.currentBillData.accounts[items].accountInlineMessages[0].type : "" )%> "><%= currentBill.attributes.currentBillData.accounts[items].accountSummary.totalAmountDue.toDisplayCurrency() %></span>
+                              <% for(var count=0; count < currentBill.attributes.currentBillData.accounts[items].accountInlineMessages.length; count++  ) { %>
+                                <div class="<%= ((currentBill.attributes.currentBillData.accounts[items].accountInlineMessages.length > 0)? currentBill.attributes.currentBillData.accounts[items].accountInlineMessages[count].type : "" )%> <%= ((currentBill.attributes.currentBillData.accounts[items].accountInlineMessages[count].code == "PAY0106") ? "greencheck" : "" )%>"> <%= currentBill.attributes.currentBillData.accounts[items].accountInlineMessages[count].text %></div>
+                              <%}%>
+                <div id="dueDateSection" class="dueDateSection eleNone"><span class="dateSection"><%=currentBill.attributes.currentBillData.accounts[items].accountSummary.dueDate%></span></div>
+                            </div>
+
+                          </div>
+                      </div>
+
+                      <article class="summaryInfo toggle eleNone MRGT10PX accList">
+                        <div class="row brdNone pastDueMsg multiAccSummarySec">
+                          <div class="col-md-12">
+                           <% for(var count=0; count < currentBill.attributes.currentBillData.accounts[items].accountInlineMessages.length; count++  ) { %>
+                                <section class="MRGB10PX">
+                                 <div class="<%= ((currentBill.attributes.currentBillData.accounts[items].accountInlineMessages.length > 0)? currentBill.attributes.currentBillData.accounts[items].accountInlineMessages[count].type : "" ) %> <%= ((currentBill.attributes.currentBillData.accounts[items].accountInlineMessages[count].code == "PAY0106") ? "greencheck" : "" )%>">
+                                  <div class="PADDT5PXB10PX">
+                                    <%=currentBill.attributes.currentBillData.accounts[items].accountInlineMessages[count].text %>
+                                  </div>
+                                </div>
+                              </section>
+                              <% } %>
+                          </div>
+
+                        </div>
+                        <div class="row brdBtm multiAccSummarySec">
+                            <div class="WDTH60 mWDT100">
+                              <h4 class="PADDT10PX text-center multiAccSumarry">Summary of Charges:</h4>
+                              <h4 class="PADDB10PX text-center multiAccSumarry"><%= currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.dateRange %></h4>
+                            </div>
+                            <div class="frmTbl oflwHidden MRGT10PX WDTH96 mrgCenter">
+                              <div class="frmRow">
+                                <div class="frmCell WDTH60 vTop brdNone mcenter">
+                                  <% if(currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.electric!="" && currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.electric){ %>
+                                  <div class="row brdBtm electric fnt1EM">
+                                    <div class="col-md-6 col-sm-6 PADDL46PX mWTD65">
+                                      Electric:
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 text-right mWTD35">
+                                      <%= currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.electric.toDisplayCurrency() %>
+                                    </div>
+                                  </div>
+                                <% } %>
+                                <% if(currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.gas!="" && currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.gas){ %>
+                                  <div class="row brdBtm gas fnt1EM">
+                                    <div class="col-md-6 col-sm-6 PADDL46PX mWTD65">
+                                      Gas:
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 text-right mWTD35">
+                                      <%= currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.gas.toDisplayCurrency() %>
+                                    </div>
+                                  </div>
+                                <% } %>
+                                <% if(currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.other!="" && currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.other){ %>
+                                  <div class="row brdBtm other fnt1EM">
+                                    <div class="col-md-6 col-sm-6 PADDL46PX mWTD65">
+                                      Services & Fees:
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 text-right mWTD35">
+                                      <%= currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.other.toDisplayCurrency() %>
+                                    </div>
+                                  </div>
+                                <% } %>
+                                <% if(currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.currentBill!="" && currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.currentBill){ %>
+                                  <div class="row currentBill fnt1EM ">
+                                    <div class="col-md-6 col-sm-6 PADDL46PX mWTD65">
+                                      Current Bill:
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 text-right mWTD35">
+                                      <%= currentBill.attributes.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.currentBill.toDisplayCurrency() %>
+                                    </div>
+                                  </div>
+                                <% } %>
+                                <div class="text-center MRGT15PX MRGB10PX">
+                                  <input type="button" value="View Current Bill" onClick="changebtn()" data-accountindexnum="<%= items%>" class="btn-primary multipleAccountViewBill"/>
+                                </div>
+                                </div>
+
+                                <div class="frmCell text-center brdNone vTop mcenter">
+                                  <label class="fnt1-4EM">Total Amount Due:</label><br/>
+                                  <h3 class="fnt3-31EM totalAmt"><%= currentBill.attributes.currentBillData.accounts[items].accountSummary.totalAmountDue.toDisplayCurrency() %></h3>
+                                  <div class="text-center MRGT10PX">
+                  <%if(currentBill.attributes.currentBillData.accounts[items].accountSummary.totalAmountDue == 0) { %>
+                    <input onclick="javascript:window.openPaymentCenter('<%= currentBill.attributes.currentBillData.accounts[items].accountNumber %>','<%=currentBill.attributes.currentBillData.accounts[items].accountSummary.totalAmountDue %>')" type="button" value="Make Future Payments" class="btnBlue WDTH200PX MRGR20PX mblubut makefuturepayment"/>
+
+                   <%}else{%>
+                    <input onclick="javascript:window.openPaymentCenter('<%= currentBill.attributes.currentBillData.accounts[items].accountNumber %>','<%=currentBill.attributes.currentBillData.accounts[items].accountSummary.totalAmountDue %>')" type="button" value="Pay Now" class="btnBlue WDTH200PX MRGR20PX mblubut"/>
+                   <%}%>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </article>
+                      <% } %>
+                  <% }); %>
+                  </article>
+
+                </article>
+              </section>
+              <% _.each(currentBillDat,function(currentBill,item,index){ %>
+                <% if(currentBill.attributes.currentBillData.accounts.length>5){ 
+          var count=0;
+          for(i=0;i<currentBill.attributes.currentBillData.accounts.length;i++){
+            if(currentBill.attributes.currentBillData.accounts[i].accountSummary.totalAmountDue!=0){count++;}
+          }%>
+                  <div class ="text-right MRGT10PX">
+                    <h6 class="MRGT10PX MRGR20PX MRGB10PX"><a href="#" class="returnTop underline">Return to top</a></h6>
+                  </div>
+          <%if(count!=0){%>
+            <div class="fRight MRGR15PX MRGB10PX payseletedbillb" id="payseletedbillb">
+              <div class="errorTXTDET eleNone" id="errorMSG4"> The maximum number of payments you can make is five. </div>
+            <input type="button" id="payseletedbillBottom" onclick="javascript:window.openPaymentCenterSelectedBills()" value="Pay Selected Bills" class="btnBlue MRGR20PX  payBtn mPDNG10 " disabled="disabled"/>
+            </div>
+          <%} if(count==0){%>
+            <div class="fRight MRGR15PX MRGB10PX " id="makeFutureBtnB">
+              <div class="errorTXTDETMFP eleNone" id="errorMSG5"> The maximum number of payments you can make is five. </div>
+            <input type="button"  onclick="javascript:window.openPaymentCenterSelectedBills()" value="Make Future Payments" class="btnBlue MRGR20PX  payBtn mPDNG10 makefuturepayment " disabled="disabled"/>
+            </div>
+
+          <% } %>
+        <div class="fRight MRGR15PX MRGB10PX hidden" id="makefuturepaymentb">
+            <div class="errorTXTDETMFP eleNone" id="errorMSG6"> The maximum number of payments you can make is five. </div>
+          <input type="button" id="makefuturepaymentbottom" onclick="javascript:window.openPaymentCenterSelectedBills()" value="Make Future Payments" class="btnBlue MRGR20PX  payBtn mPDNG10 makefuturepayment " disabled="disabled"/>
+        </div>
+        <%}%>
+              <% }); %>
+              </section>
+              <div class="text-right MRGT10PX">
+
+              </div>
+          </script>
+
+          <!-- ************************************************************
+              END - Multiple Accounts Template
+        ************************************************************ -->

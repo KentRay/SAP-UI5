@@ -1,0 +1,416 @@
+{
+  "currentBillData": {
+    "currentBillData": {
+      "userProfile": {
+        "name": "Keion Brantley",
+        "address": {
+          "streetAddress": "128 COLLEGE PL APT 1",
+          "city": "YPSILANTI",
+          "state": "MI",
+          "zip": "48197"
+        }
+      },
+      "statusBarMessages": [],
+      "totalAmountDue": "3281.19",
+      "accounts": [
+        {
+          "accountNumber": "741890300048",
+          "serviceAddress": [
+            {
+              "siteID": "1753535",
+              "address": "128 COLLEGE PL",
+              "city": "YPSILANTI",
+              "state": "MI",
+              "zip": "48197"
+            }
+          ],
+          "statusBarMessages": [
+            {
+              "code": "PD0107",
+              "text": "Please pay the minimum shutoff amount of $2805.05 immediately to prevent service shutoff.",
+              "type": "AS_PastDueL2StsMsg",
+              "style": "emergency_bg"
+            },
+            {
+              "code": "CB0107",
+              "text": "You still have an additional past due amount of  $69.14 due immediately to prevent another shutoff notice on your next bill.",
+              "type": "AS_CurrentAmountStsMsg",
+              "style": "michigan"
+            }
+          ],
+          "accountInlineMessages": [
+            {
+              "code": "PD1109",
+              "text": "You have a shut-off notice. Pay $2805.05 immediately",
+              "type": "IL_PastDueL2StsMsg",
+              "style": "emergency_bg"
+            }
+          ],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "2808.35",
+            "dueDate": "2015-06-12T04:00:00.000Z"
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "2874.19",
+            "dueDate": "2015-06-22T04:00:00.000Z",
+            "totalPayments": "3.30",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": "May 01 - May 29, 2015",
+              "charges": {
+                "pastDue": "2805.05",
+                "numberOfDays": "28",
+                "gas": "16.95",
+                "other": "52.19",
+                "currentBill": "69.14",
+                "averageGas": 0.61
+              }
+            },
+            "billId": "557530255"
+          }
+        },
+        {
+          "accountNumber": "741890300022",
+          "serviceAddress": [
+            {
+              "siteID": "574971",
+              "address": "128 COLLEGE PL APT 2",
+              "city": "YPSILANTI",
+              "state": "MI",
+              "zip": "48197"
+            }
+          ],
+          "statusBarMessages": [
+            {
+              "code": "PD0107",
+              "text": "Please pay the minimum shutoff amount of $127.76 immediately to prevent service shutoff.",
+              "type": "AS_PastDueL2StsMsg",
+              "style": "emergency_bg"
+            },
+            {
+              "code": "CB0107",
+              "text": "You still have an additional past due amount of  $21.76 due immediately to prevent another shutoff notice on your next bill.",
+              "type": "AS_CurrentAmountStsMsg",
+              "style": "michigan"
+            }
+          ],
+          "accountInlineMessages": [
+            {
+              "code": "PD1109",
+              "text": "You have a shut-off notice. Pay $127.76 immediately",
+              "type": "IL_PastDueL2StsMsg",
+              "style": "emergency_bg"
+            }
+          ],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "127.76",
+            "dueDate": "2015-06-12T04:00:00.000Z"
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "149.52",
+            "dueDate": "2015-06-22T04:00:00.000Z",
+            "totalPayments": "0.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": "April 30 - May 29, 2015",
+              "charges": {
+                "pastDue": "127.76",
+                "numberOfDays": "29",
+                "electric": "19.37",
+                "other": "2.39",
+                "currentBill": "21.76",
+                "averageElectric": 0.67
+              }
+            },
+            "billId": "557509653"
+          }
+        },
+        {
+          "accountNumber": "741890300030",
+          "serviceAddress": [
+            {
+              "siteID": "3291916",
+              "address": "128 COLLEGE PL BLDG HSE",
+              "city": "YPSILANTI",
+              "state": "MI",
+              "zip": "48197"
+            }
+          ],
+          "statusBarMessages": [],
+          "accountInlineMessages": [
+            {
+              "code": "PD1109",
+              "text": "You have a shut-off notice. Pay $134.43 immediately",
+              "type": "IL_PastDueL2StsMsg",
+              "style": "emergency_bg"
+            }
+          ],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "134.43",
+            "dueDate": "2015-04-15T04:00:00.000Z"
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "184.00",
+            "dueDate": "2015-06-22T04:00:00.000Z",
+            "totalPayments": "0.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": "April 30 - May 29, 2015",
+              "charges": {
+                "pastDue": "92.00",
+                "numberOfDays": "29",
+                "electric": "27.51",
+                "currentBill": "27.51",
+                "averageElectric": 0.95
+              }
+            },
+            "billId": "557509686"
+          }
+        },
+        {
+          "accountNumber": "741890300014",
+          "serviceAddress": [
+            {
+              "siteID": "1950246",
+              "address": "128 COLLEGE PL APT 1",
+              "city": "YPSILANTI",
+              "state": "MI",
+              "zip": "48197"
+            }
+          ],
+          "statusBarMessages": [
+            {
+              "code": "PD0104",
+              "text": "Please pay your total past due amount of  $73.48 immediately to prevent a shutoff notice.",
+              "type": "AS_PastDueL1StsMsg",
+              "style": "alert_bg"
+            }
+          ],
+          "accountInlineMessages": [
+            {
+              "code": "PD1104",
+              "text": "Your Account is Past Due. Pay $73.48 immediately.",
+              "type": "IL_PastDueL1StsMsg",
+              "style": "alert_bg"
+            }
+          ],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "",
+            "dueDate": ""
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "73.48",
+            "dueDate": "2015-06-22T04:00:00.000Z",
+            "totalPayments": "2.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": "April 30 - May 29, 2015",
+              "charges": {
+                "pastDue": "55.89",
+                "numberOfDays": "29",
+                "electric": "16.55",
+                "other": "1.04",
+                "currentBill": "17.59",
+                "averageElectric": 0.57
+              }
+            },
+            "billId": "557509531"
+          }
+        }
+      ]
+    }
+  },
+  "balanceData": {
+    "numberOfAccounts": 4,
+    "totalAmountDue": {
+      "prefix": "Total Amount",
+      "amount": 3281.19,
+      "suffix": "",
+      "priorityLevel": 1
+    }
+  },
+  "invoiceLineItems": [
+    {
+      "product": "Gas",
+      "serviceAddresses": [
+        {
+          "siteID": "1753535",
+          "addressLine1": "128 COLLEGE PL",
+          "addressLine2": " ",
+          "city": "YPSILANTI",
+          "state": "MI",
+          "zipcode": "48197",
+          "meters": [
+            {
+              "meterNumber": "9032445",
+              "meterStart": "7673",
+              "meterStop": "7680",
+              "readingType": "Actual",
+              "lineItemDetails": [
+                {
+                  "lineItemDescription": "Customer Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 10.5
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Gas Distribution Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "7 CCF @ 0.24942",
+                      "amount": 1.74
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Energy Optimization",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "7 CCF @ 0.01777",
+                      "amount": 0.12
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Gas Cost Recovery",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "7 CCF @ 0.407",
+                      "amount": 2.85
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "IRM Surcharge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.88
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Reservation Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "7 CCF @ 0.029",
+                      "amount": 0.2
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "U-16877 RDM Surch./Credit",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.01
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Residential Michigan Sales Tax",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.65
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product": "Services and Fees",
+      "totalAmount": 52.19,
+      "lineItemDetails": [
+        {
+          "lineItemDescription": "Late Payment Charge",
+          "itemDetails": [
+            {
+              "amount": 52.19
+            },
+            {}
+          ]
+        }
+      ]
+    }
+  ]
+}
